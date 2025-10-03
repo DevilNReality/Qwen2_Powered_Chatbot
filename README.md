@@ -17,6 +17,7 @@ The chatbot uses the Qwen/Qwen2-0.5B-Instruct model—a compact, instruction-tun
 ### **To run the chatbot locally:**
 
 **1. Install Required Libraries**
+
 This project uses four key Python libraries:
 
 * **Transformers** – *for loading and interacting with the Qwen2 model*
@@ -27,16 +28,19 @@ This project uses four key Python libraries:
 These can be installed using pip. Once installed, your environment is ready to run the chatbot or prepare it for fine-tuning.
 
 **2. Load the Pretrained Model**
+
 The chatbot uses Qwen/Qwen2-0.5B-Instruct, a small but powerful instruction-tuned language model. It’s downloaded automatically from Hugging Face when the script runs, so no manual setup is required.
 
 The model is loaded along with its tokenizer, which breaks down user input into tokens the model understands. The tokenizer is also configured to pad shorter inputs and truncate longer ones, ensuring consistent input size during training and inference.
 
 **3. Initialize the Chatbot Persona**
+
 Before the chatbot starts interacting, it’s given a system prompt that defines its personality. In this case, the assistant is set to be helpful, friendly, and conversational. This prompt helps guide the model’s tone and behavior throughout the session.
 
 An initial greeting message is also added to the chat history so users are welcomed when the interface launches.
 
 **4. Launch the Gradio Interface**
+
 Gradio is used to create a simple, interactive web interface. It displays the conversation history and allows users to send messages to the chatbot. The backend logic handles user input, generates responses using the model, and updates the chat history in real time.
 
 Once launched, the chatbot is ready to use—no additional configuration is needed.
